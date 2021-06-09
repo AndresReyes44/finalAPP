@@ -81,6 +81,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
       //  str += dateForm.string(from: (top10?.getList()[indexPath.row].date)!)
         str += " " + ((myReceta.getList()[indexPath.row].title))
         str += " " + String((myReceta.getList()[indexPath.row].description))
+        str += " " + String((myReceta.getList()[indexPath.row].description))
         cell.textLabel!.text = str
         
         return cell
