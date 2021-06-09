@@ -9,43 +9,17 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-    @IBOutlet weak var tableView: UITableView!
-    // MARK: Properties
+    
+    
+    //@IBOutlet weak var tableView: UITableView!
+    
     @IBOutlet weak var myTableView: UITableView!
-    var detailViewController : DetailViewController? = nil
-        var myReceta: receta!  = receta()
-    // MARK: Table View
-      /*  func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
-        
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-             return myReceta.recetaList.count
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-            
-            cell.textLabel!.text = myReceta.recetaList[indexPath.row].Nombre
-            print("***"+myReceta.recetaList[indexPath.row].Nombre+"***")
-            cell.accessoryType = .disclosureIndicator
-            return cell
-        }
-    // MARK: Segues
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "showDetail" {
-                if let indexPath = tableView.indexPathForSelectedRow {
-                     let selectedReceta : Rresetas = myReceta.recetaList[indexPath.row]
-                    let controller = (segue.destination as! DetailViewController)
-                    controller.detailItem = selectedReceta
-                }
-            }
-        }
- */
+    //var detailViewController : DetailViewController? = nil
+    var myReceta: receta!  = receta()
     func configureView() {
         myReceta.loadData {
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self.myTableView.reloadData()
             }
         }
     }
@@ -54,8 +28,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configureView()
-        tableView.reloadData()
-        print("Print from top10view ", recetadata!.getList())
+        myTableView.reloadData()
+        print("Print from ViewController ", recetadata!.getList())
     }
     
     var recetadata : receta? {
@@ -65,7 +39,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // MARK: Table View
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in recetatableView: UITableView) -> Int {
         return 1
     }
     
@@ -73,7 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return myReceta!.getList().count
     }
     
-    let dateForm = DateFormatter()
+    //let dateForm = DateFormatter()
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)

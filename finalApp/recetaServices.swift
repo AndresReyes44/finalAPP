@@ -38,7 +38,7 @@ class recetaServices{
                     print("error trying to convert data to JSON")
                     return
                 }
-                var dateForm = DateFormatter()
+              //  var dateForm = DateFormatter()
                 var recetaList : [Rresetas] = []
                 for (index, element) in recetasResponse.enumerated() {
                     print(index, ":", element)

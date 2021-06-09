@@ -7,15 +7,7 @@
 
 import Foundation
 
-//class Rresetas
-//{
-    //var Nombre: String = " "
-    //var prepareTime: String = " "
-    //var time: String = " "
-    //var ingredientes: String = " "
-    //var description: String = " "
-    
-//}
+
 class Rresetas : Codable {
     var title : String
     var prepTime : String
