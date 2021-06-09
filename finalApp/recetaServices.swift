@@ -50,7 +50,7 @@ class recetaServices{
                     let cooktime:String = ( element["cooktime"] as? String)!
                     let ingredientes:String = ( element["ingredientes"] as? String)!
                     
-                    let recetas = Rresetas(Nombre: Nombre, description: description, prepTime:prepTime, cooktime: cooktime, ingredientes: ingredientes)
+                    let recetas = Rresetas(Nombre: Nombre, prepareTime: prepTime, cooktime: cooktime, ingredientes: ingredientes, description: description)
                     
                     
                     recetaList.append(recetas)
