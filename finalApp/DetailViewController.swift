@@ -19,11 +19,11 @@ class DetailViewController: UIViewController {
     func configureView() {
             
         if let myReceta = detailItem {
-             nombreLabel.text = myReceta.Nombre
-             prepareTimeLabel.text = myReceta.prepareTime
+             nombreLabel.text = myReceta.title
+             prepareTimeLabel.text = myReceta.prepTime
              descripcionTextView.text = myReceta.cooktime
              cookTimeLabel.text = myReceta.description
-            ingredientesLabel.text = myReceta.ingredientes
+            ingredientesLabel.text = myReceta.ingredients
          }
         }
         

@@ -9,6 +9,7 @@ import Foundation
 
 class recetaServices{
     public typealias UpdateListClosure = ([Rresetas]) -> Void
+    
     func makeGetCall(_ recetaList: [Rresetas], _ handler: @escaping UpdateListClosure) {
         let recetasEndpoint: String = "https://social-chef-backend.herokuapp.com/recipes"
         guard let url = URL(string: recetasEndpoint) else {
@@ -37,7 +38,7 @@ class recetaServices{
                     print("error trying to convert data to JSON")
                     return
                 }
-                //var dateForm = DateFormatter()
+                var dateForm = DateFormatter()
                 var recetaList : [Rresetas] = []
                 for (index, element) in recetasResponse.enumerated() {
                     print(index, ":", element)

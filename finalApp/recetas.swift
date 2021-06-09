@@ -46,9 +46,9 @@ class receta
             handler()
         }
     }
-    init(){
-        recetaList = recetaList.sorted(by: { $0.Nombre < $1.Nombre })
-    }
+    //init(){
+      //  recetaList = recetaList.sorted(by: { $0.title < $1.title })
+    //}
         
 }
 

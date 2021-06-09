@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: Properties
     @IBOutlet weak var myTableView: UITableView!
     var detailViewController : DetailViewController? = nil
-        var myReceta = receta()
+        var myReceta: receta!  = receta()
     // MARK: Table View
       /*  func numberOfSections(in tableView: UITableView) -> Int {
             return 1
@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myReceta.getList().count
+        return myReceta!.getList().count
     }
     
     let dateForm = DateFormatter()
@@ -79,9 +79,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var str = ""
       //  str += dateForm.string(from: (top10?.getList()[indexPath.row].date)!)
-        str += " " + ((myReceta.getList()[indexPath.row].title))
-        str += " " + String((myReceta.getList()[indexPath.row].description))
-        str += " " + String((myReceta.getList()[indexPath.row].description))
+        str += ((myReceta?.getList()[indexPath.row].title)!)
+        str += " " + ((myReceta?.getList()[indexPath.row].description)!)
+       // str += " " + ((myReceta?.getList()[indexPath.row].description))
         cell.textLabel!.text = str
         
         return cell
