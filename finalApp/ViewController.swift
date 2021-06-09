@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var detailViewController : DetailViewController? = nil
         var myReceta = receta()
     // MARK: Table View
-        func numberOfSections(in tableView: UITableView) -> Int {
+      /*  func numberOfSections(in tableView: UITableView) -> Int {
             return 1
         }
         
@@ -41,6 +41,49 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
             }
         }
+ */
+    func configureView() {
+        myReceta.loadData {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        configureView()
+        tableView.reloadData()
+        print("Print from top10view ", recetadata!.getList())
+    }
+    
+    var recetadata : receta? {
+        didSet {
 
+        }
+    }
+    
+    // MARK: Table View
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return myReceta.getList().count
+    }
+    
+    let dateForm = DateFormatter()
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        var str = ""
+      //  str += dateForm.string(from: (top10?.getList()[indexPath.row].date)!)
+        str += " " + ((myReceta.getList()[indexPath.row].title))
+        str += " " + String((myReceta.getList()[indexPath.row].description))
+        cell.textLabel!.text = str
+        
+        return cell
+    }
     
 }

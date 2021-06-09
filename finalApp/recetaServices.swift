@@ -44,13 +44,13 @@ class recetaServices{
                     //                        let score = Score(name: "GROGU", date: Date(), points: 200)
                     //                        let score = Score(name: element["name"] as! String, date: dateForm.date(from: element["date"] as! String) ?? Date(), points: element["points"] as! Int)
                     
-                    let Nombre:String = (element["Nombre"] as? String)!
+                    let title:String = (element["title"] as? String)!
                     let description:String = ( element["description"] as? String)!
                     let prepTime:String = ( element["prepTime"] as? String)!
                     let cooktime:String = ( element["cooktime"] as? String)!
-                    let ingredientes:String = ( element["ingredientes"] as? String)!
+                    let ingredients:String = ( element["ingredients"] as? String)!
                     
-                    let recetas = Rresetas(Nombre: Nombre, prepareTime: prepTime, cooktime: cooktime, ingredientes: ingredientes, description: description)
+                    let recetas = Rresetas(title: title, prepTime: prepTime, cooktime: cooktime, ingredients: ingredients, description: description)
                     
                     
                     recetaList.append(recetas)

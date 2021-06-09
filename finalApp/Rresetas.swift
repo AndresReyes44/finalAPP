@@ -17,17 +17,17 @@ import Foundation
     
 //}
 class Rresetas : Codable {
-    var Nombre : String
-    var prepareTime : String
+    var title : String
+    var prepTime : String
     var cooktime : String
-    var ingredientes : String
+    var ingredients : String
     var description : String
     
-    init(Nombre: String, prepareTime: String, cooktime: String, ingredientes: String, description: String ) {
-        self.Nombre = Nombre
-        self.prepareTime = prepareTime
+    init(title: String, prepTime: String, cooktime: String, ingredients: String, description: String ) {
+        self.title = title
+        self.prepTime = prepTime
         self.cooktime = cooktime
-        self.ingredientes = ingredientes
+        self.ingredients = ingredients
         self.description = description
     }
 }
