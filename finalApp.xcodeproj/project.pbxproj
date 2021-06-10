@@ -14,7 +14,7 @@
 		B385DFE0266E779000E9AD14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B385DFDE266E779000E9AD14 /* Main.storyboard */; };
 		B385DFE2266E779100E9AD14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B385DFE1266E779100E9AD14 /* Assets.xcassets */; };
 		B385DFE5266E779100E9AD14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B385DFE3266E779100E9AD14 /* LaunchScreen.storyboard */; };
-		B385DFEE266E7AA200E9AD14 /* recetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385DFED266E7AA200E9AD14 /* recetas.swift */; };
+		B385DFEE266E7AA200E9AD14 /* receta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385DFED266E7AA200E9AD14 /* receta.swift */; };
 		B385DFF1266E7AB500E9AD14 /* Rresetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385DFF0266E7AB500E9AD14 /* Rresetas.swift */; };
 		B385DFF4266E7B5000E9AD14 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385DFF3266E7B5000E9AD14 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 		B385DFE1266E779100E9AD14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B385DFE4266E779100E9AD14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B385DFE6266E779100E9AD14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B385DFED266E7AA200E9AD14 /* recetas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recetas.swift; sourceTree = "<group>"; };
+		B385DFED266E7AA200E9AD14 /* receta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = receta.swift; sourceTree = "<group>"; };
 		B385DFF0266E7AB500E9AD14 /* Rresetas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rresetas.swift; sourceTree = "<group>"; };
 		B385DFF3266E7B5000E9AD14 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,7 +72,7 @@
 				B385DFE1266E779100E9AD14 /* Assets.xcassets */,
 				B385DFE3266E779100E9AD14 /* LaunchScreen.storyboard */,
 				B385DFE6266E779100E9AD14 /* Info.plist */,
-				B385DFED266E7AA200E9AD14 /* recetas.swift */,
+				B385DFED266E7AA200E9AD14 /* receta.swift */,
 				B385DFF0266E7AB500E9AD14 /* Rresetas.swift */,
 				B34D1E93266F70E900A3A641 /* recetaServices.swift */,
 			);
@@ -155,7 +155,7 @@
 				B34D1E94266F70E900A3A641 /* recetaServices.swift in Sources */,
 				B385DFF4266E7B5000E9AD14 /* DetailViewController.swift in Sources */,
 				B385DFF1266E7AB500E9AD14 /* Rresetas.swift in Sources */,
-				B385DFEE266E7AA200E9AD14 /* recetas.swift in Sources */,
+				B385DFEE266E7AA200E9AD14 /* receta.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

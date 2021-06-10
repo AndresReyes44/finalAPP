@@ -15,7 +15,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var myTableView: UITableView!
     //var detailViewController : DetailViewController? = nil
-    var myReceta: receta!  = receta()
+    var myReceta: receta  = receta()
+    
     func configureView() {
         myReceta.loadData {
             DispatchQueue.main.async {
@@ -29,14 +30,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         configureView()
         myTableView.reloadData()
-        print("Print from ViewController ", recetadata!.getList())
+        print("Print from ViewController ", myReceta.getList())
     }
     
-    var recetadata : receta? {
-        didSet {
+   // var recetadata : receta? {
+     //   didSet {
 
-        }
-    }
+       // }
+    //}
     
     // MARK: Table View
     func numberOfSections(in recetatableView: UITableView) -> Int {
@@ -44,17 +45,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myReceta!.getList().count
+        return myReceta.getList().count
     }
     
     //let dateForm = DateFormatter()
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         var str = ""
       //  str += dateForm.string(from: (top10?.getList()[indexPath.row].date)!)
-        str += ((myReceta?.getList()[indexPath.row].title)!)
-        str += " " + ((myReceta?.getList()[indexPath.row].description)!)
+        str += ((myReceta.getList()[indexPath.row].title))
+        str += " " + ((myReceta.getList()[indexPath.row].description))
        // str += " " + ((myReceta?.getList()[indexPath.row].description))
         cell.textLabel!.text = str
         

@@ -34,28 +34,55 @@ class recetaServices{
             }
             do {
                 guard let recetasResponse = try JSONSerialization.jsonObject(with: responseData, options: [])
-                        as? [[String: Any]] else {
+                        as? [String: Any] else {
                     print("error trying to convert data to JSON")
                     return
+               /*     do {
+                                    guard let todoResponse = try JSONSerialization.jsonObject(with: responseData, options: [])
+                                        as? [String: Any] else {
+                                            print("error trying to convert data to JSON")
+                                            return
+                                    }
+                                    
+                                    guard let todoTitle = todoResponse["title"] as? String else {
+                                        print("Could not get todo title from JSON")
+                                        return
+                                    }
+                                    
+                                    handler(todoTitle, descriptionTextView)
+                                } catch  {
+                                    print("error trying to convert data to JSON")
+                                    return
+                                }*/
+
                 }
               //  var dateForm = DateFormatter()
                 var recetaList : [Rresetas] = []
-                for (index, element) in recetasResponse.enumerated() {
-                    print(index, ":", element)
+                guard let title = recetasResponse["title"] as? String else {
+                    print("Could not get todo title from JSON")
+                    return
+                }
+                guard let description = recetasResponse["title"] as? String else {
+                    print("Could not get todo title from JSON")
+                    return
+                }
+                
+               // for (index, element) in recetasResponse.enumerated() {
+                    //print(index, ":", element)
                     //                        let score = Score(name: "GROGU", date: Date(), points: 200)
                     //                        let score = Score(name: element["name"] as! String, date: dateForm.date(from: element["date"] as! String) ?? Date(), points: element["points"] as! Int)
                     
-                    let title:String = (element["title"] as? String)!
-                    let description:String = ( element["description"] as? String)!
-                    let prepTime:String = ( element["prepTime"] as? String)!
-                    let cooktime:String = ( element["cooktime"] as? String)!
-                    let ingredients:String = ( element["ingredients"] as? String)!
+               //     let title:String = (element["title"] as? String)!
+               //     let description:String = ( element["description"] as? String)!
+               //     let prepTime:String = ( element["prepTime"] as? String)!
+               //     let cooktime:String = ( element["cooktime"] as? String)!
+               //     let ingredients:String = ( element["ingredients"] as? String)!
                     
-                    let recetas = Rresetas(title: title, prepTime: prepTime, cooktime: cooktime, ingredients: ingredients, description: description)
+                    let receta = Rresetas(title: title, description: description)
                     
                     
-                    recetaList.append(recetas)
-                }
+                    recetaList.append(receta)
+                //}
                 
                 handler(recetaList)
             } catch  {

@@ -15,11 +15,11 @@ class Rresetas : Codable {
     var ingredients : String
     var description : String
     
-    init(title: String, prepTime: String, cooktime: String, ingredients: String, description: String ) {
+    init(title: String, description: String ) {
         self.title = title
-        self.prepTime = prepTime
-        self.cooktime = cooktime
-        self.ingredients = ingredients
+        self.prepTime = ""
+        self.cooktime = ""
+        self.ingredients = ""
         self.description = description
     }
 }
